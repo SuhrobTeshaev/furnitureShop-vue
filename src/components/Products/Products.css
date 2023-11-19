@@ -1,0 +1,32 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 614px;
+  
+  }
+  
+  .products_card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 265px;
+    align-items: center;
+    margin: 20px 10px auto 110px;
+    padding-inline: 5px;
+    border-radius: 10px;
+  
+  }
+  .products_card:first-child {
+    border: none;
+  }
+  .products_card:first-child h3 {
+    margin: auto;
+    
+    
+  }
+  
+  .products_card img {
+    width: 100%;
+    height: 200px;
+  }

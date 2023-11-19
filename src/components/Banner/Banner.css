@@ -1,0 +1,31 @@
+.banner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  
+  }
+  .banner_left {
+    background: #f9fdff;
+    width: 42%;
+    height: 750px;
+  
+  
+  }
+  .banner_left-content {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 360px;
+    align-items: center;
+    margin: 260px 100px;
+  }
+  
+  .banner_img {
+    display: block;
+    align-items: center;
+  }
+  .banner_right {
+    width: 25%;
+    background: #fceae8;
+    height: 750px;
+  }
