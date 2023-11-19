@@ -15,7 +15,7 @@
         </nav>
         <div class="header_right">
           <div class="header_search">
-            <input type="search" />
+            
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -28,6 +28,10 @@
                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
               />
             </svg>
+            <input 
+            type="search"
+            placeholder="Поиск товаров..."
+            />
           </div>
           <div class="header_cart">
             <svg
@@ -42,7 +46,7 @@
                 d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
               />
             </svg>
-            <span>count</span>
+            <span class="header_cart_count">1</span>
           </div>
         </div>
       </div>
@@ -68,7 +72,9 @@
       </div>
     </div>
     <div class="products">
-      <div class="products_card">Новинки</div>
+      <div class="products_card">
+       <h3>НОВИНКИ</h3> 
+      </div>
       <div class="products_card">
         <img src="./img/smerk.png" alt="Смеркается" />
         <p>Стул "Смеркается"</p>
@@ -106,9 +112,15 @@
       <h3>ПОСЛЕДНЫЙ ШАНС</h3>
       <div class="sale_category">
         <ul>
-          <li>Стулья</li>
-          <li>Диваны</li>
-          <li>Кресла</li>
+          <li>
+           <a href="/">СТУЛЬЯ</a> 
+          </li>
+          <li>
+           <a href="/">ДИВАНЫ</a> 
+          </li>
+          <li>
+          <a href="">КРЕСЛА</a>  
+          </li>
         </ul>
       </div>
       <div class="sale_cards">
@@ -119,7 +131,7 @@
             <span>245$</span>
           </div>
           <img src="./img/cream-burle.png" alt="карамель" />
-          <span>Купить</span>
+          <button>Купить</button>
         </div>
         <div class="sale_card">
           <div class="sale_card_title">
@@ -128,7 +140,7 @@
             <span>245$</span>
           </div>
           <img src="./img/cream-burle.png" alt="карамель" />
-          <span>Купить</span>
+          <button>Купить</button>
         </div>
         <div class="sale_card">
           <div class="sale_card_title">
@@ -137,7 +149,7 @@
             <span>245$</span>
           </div>
           <img src="./img/cream-burle.png" alt="карамель" />
-          <span>Купить</span>
+          <button>Купить</button>
         </div>
         <div class="sale_card">
           <div class="sale_card_title">
@@ -146,7 +158,7 @@
             <span>245$</span>
           </div>
           <img src="./img/cream-burle.png" alt="карамель" />
-          <span>Купить</span>
+          <button>Купить</button>
         </div>
         <div class="sale_card">
           <div class="sale_card_title">
@@ -155,7 +167,7 @@
             <span>245$</span>
           </div>
           <img src="./img/cream-burle.png" alt="карамель" />
-          <span>Купить</span>
+          <button>Купить</button>
         </div>
       </div>
     </div>
@@ -163,13 +175,21 @@
         <div class="footer_logo">
           <img src="./img/logo.png" alt="logo" />
         </div>
-        <div>developed by....</div>
+        <div class="footer_dev_link">developed by....</div>
         <div class="nav">
           <ul>
-            <li>ДОСТАВКА</li>
-            <li>ОПЛАТА</li>
-            <li>КОНТАКТЫ</li>
-            <li>ГАРАНТИИ</li>
+            <li>
+             <a href="#">ДОСТАВКА</a> 
+            </li>
+            <li>
+              <a href="#">ОПЛАТА</a> 
+            </li>
+            <li>
+              <a href="#">КОНТАКТЫ</a> 
+            </li>
+            <li>
+              <a href="#">ГАРАНТИИ</a> 
+            </li>
           </ul>
         </div>
     </footer>
@@ -190,6 +210,8 @@ body {
 ul {
   list-style: none;
 }
+
+
 
 .container {
   display: flex;
@@ -235,14 +257,44 @@ header {
 
 
 }
+
+.header_search input {
+  border-radius: 5px;
+  padding-left: 10px;
+  border: none;
+
+}
+
+.header_cart {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.header_cart_count {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #b9b9b9;
+  right: 13px;
+  bottom: 5px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 10px;
+  color: #040404;
+  text-align: center;
+  line-height: 10px;
+
+}
 .banner {
   display: flex;
   flex-direction: row;
   width: 100%;
+
 }
 .banner_left {
   background: #f9fdff;
-  width: 43%;
+  width: 42%;
   height: 750px;
 
 
@@ -261,7 +313,7 @@ header {
   align-items: center;
 }
 .banner_right {
-  width: 36.4%;
+  width: 25%;
   background: #fceae8;
   height: 750px;
 }
@@ -271,17 +323,27 @@ header {
   flex-wrap: wrap;
   width: 100%;
   height: 614px;
-  margin: 10px;
+
 }
 
 .products_card {
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 250px;
+  height: 265px;
   align-items: center;
-  margin: 30px 40px auto 50px;
+  margin: 20px 10px auto 110px;
   padding-inline: 5px;
+  border-radius: 10px;
+
+}
+.products_card:first-child {
+  border: none;
+}
+.products_card:first-child h3 {
+  margin: auto;
+  
+  
 }
 
 .products_card img {
@@ -289,9 +351,10 @@ header {
   height: 200px;
 }
 
-.feedback {
+.feedback_carusel {
   width: 100%;
   height: 400px;
+
 }
 
 .feedback_card {
@@ -316,6 +379,13 @@ header {
   height: 700px;
   display: flex;
   flex-direction: column;
+
+}
+
+
+
+.sale h3 {
+  margin: 10px;
 }
 
 .sale_category ul {
@@ -323,6 +393,20 @@ header {
   flex-direction: row;
   margin: 5px;
   padding: 5px;
+}
+
+.sale_category ul li {
+  padding-left: 5px;
+  font-weight: 600;
+}
+
+.sale_category ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sale_category ul li a:hover {
+  border-bottom: 1px solid #000;
 }
 
 .sale_cards {
@@ -340,6 +424,8 @@ header {
   align-items: center;
   position: relative;
   margin: 20px;
+  border: 2px solid rgb(213, 185, 185);
+  border-radius: 10px;
 }
 
 .sale_card img {
@@ -354,28 +440,53 @@ header {
   padding: 30px;
 }
 
-.sale_card span {
+.sale_card button {
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px 10px 10px 10px;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+}
+
+.sale_card button:hover {
+  background: black;
+  color: #fff;
+  transform: translateY(-15px);
 }
 
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  
 }
 
 footer ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 10px;
+  margin: 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer ul li a:hover {
+  border-bottom: 1px solid #000;
 }
 
 .footer_logo  img {
   width: 30px;
   height: 30px;
+  margin: 10px;
+}
+
+.footer_dev_link {
+  margin: 10px;
 }
 
 footer ul li {
