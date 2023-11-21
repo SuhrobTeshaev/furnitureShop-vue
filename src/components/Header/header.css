@@ -33,15 +33,12 @@ header {
     display: flex;
     flex-wrap: wrap;  
     padding: 20px;
-  
-  
   }
   
   .header_search input {
     border-radius: 5px;
     padding-left: 10px;
     border: none;
-  
   }
   
   .header_cart {
@@ -55,13 +52,12 @@ header {
     width: 10px;
     height: 10px;
     background: #b9b9b9;
-    right: 13px;
+    right: 10px;
     bottom: 5px;
     border-radius: 50%;
     font-weight: 700;
     font-size: 10px;
     color: #040404;
     text-align: center;
-    line-height: 10px;
-  
+    line-height: 12px;
   }

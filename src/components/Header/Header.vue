@@ -1,13 +1,15 @@
 <script >
-import   './Header.css'
-
+import   './header.css'
 </script>
 
 <template>
     <header>
       <div class="header_content">
+        
         <div class="header_logo">
+         <a href="#/home">
           <img src="./../../img/logo.png" alt="logo" />
+         </a> 
         </div>
         <nav>
           <ul>

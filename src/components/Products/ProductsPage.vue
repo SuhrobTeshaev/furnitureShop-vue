@@ -1,18 +1,20 @@
-<script >
+<script setup>
 import   './Products.css'
-
 </script>
 
 <template>
     <div class="products">
-      <div class="products_card">
+        <div class="products_card">
        <h3>НОВИНКИ</h3> 
       </div>
+      <router-link to="/product">
       <div class="products_card">
-        <img src="./../../img/smerk.png" alt="Смеркается" />
-        <p>Стул "Смеркается"</p>
-        <span>$280</span>
-      </div>
+              <img src="./../../img/smerk.png" alt="Смеркается" />
+              <p>Стул "Смеркается"</p>
+              <span>$280</span>
+            </div>
+      </router-link>
+     
       <div class="products_card">
         <img src="./../../img/white-chocolate.png" alt="Белый шоколад" />
         <p>Стул офисный "Белый шоколад"</p>

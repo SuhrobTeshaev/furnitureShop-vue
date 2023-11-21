@@ -8,13 +8,13 @@ import './Sale.css'
       <div class="sale_category">
         <ul>
           <li>
-           <a href="/">СТУЛЬЯ</a> 
+           <a href="#/product">СТУЛЬЯ</a> 
           </li>
           <li>
-           <a href="/">ДИВАНЫ</a> 
+           <a href="#/product">ДИВАНЫ</a> 
           </li>
           <li>
-          <a href="">КРЕСЛА</a>  
+          <a href="#/product">КРЕСЛА</a>  
           </li>
         </ul>
       </div>
