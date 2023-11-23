@@ -1,11 +1,17 @@
 <script setup>
 import Header from './components/Header/Header.vue';
 import Footer from './components/Footer/Footer.vue';
+import HomePage from './components/Home/HomePage.vue';
+import UProduct from './components/Products/UProduct.vue';
+
 </script>
 <template>
   <div class="container">
-    <Header/>
-        <RouterView></RouterView>   
+    <Header />
+      <RouterView>
+        <HomePage/> ||
+        <UProduct/>
+      </RouterView>   
     <Footer/>
   </div>
 </template>
